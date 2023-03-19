@@ -19,6 +19,9 @@ class ViewController: UIViewController {
         redLabel.alpha = 0.3
         yellowLabel.alpha = 0.3
         greenLabel.alpha = 0.3
+        redLabel.layer.cornerRadius = 84
+        yellowLabel.layer.cornerRadius = 84
+        greenLabel.layer.cornerRadius = 84
     }
     @IBAction func startButtonDidTapped(_ sender: UIButton) {
 //        redLabel.alpha = 1
