@@ -29,14 +29,21 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJm-YM-hEL">
-                                <rect key="frame" x="122.5" y="448" width="75" height="35"/>
+                                <rect key="frame" x="110" y="448" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Vu6-qy-Ocb"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMo-Oo-YKZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OJm-YM-hEL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Lz-UZ-U8M"/>
                             <constraint firstItem="tRi-Pd-Kyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="3tp-zu-Sjo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tRi-Pd-Kyh" secondAttribute="trailing" constant="110" id="4a5-dJ-tH3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OJm-YM-hEL" secondAttribute="bottom" constant="85" id="FlW-kY-bW2"/>
@@ -44,20 +51,23 @@
                             <constraint firstItem="oJo-wB-BWs" firstAttribute="top" secondItem="tRi-Pd-Kyh" secondAttribute="bottom" constant="21" id="Poh-ch-TJV"/>
                             <constraint firstItem="oJo-wB-BWs" firstAttribute="height" secondItem="tRi-Pd-Kyh" secondAttribute="height" id="R1t-kK-6Mx"/>
                             <constraint firstItem="tRi-Pd-Kyh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="T1l-hz-IND"/>
-                            <constraint firstItem="OJm-YM-hEL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122.5" id="W9s-lg-2Tl"/>
                             <constraint firstItem="OJm-YM-hEL" firstAttribute="top" secondItem="tye-lo-43E" secondAttribute="bottom" constant="40" id="Z3x-gf-kC6"/>
                             <constraint firstItem="tye-lo-43E" firstAttribute="top" secondItem="oJo-wB-BWs" secondAttribute="bottom" constant="21" id="dB8-gz-SQt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tye-lo-43E" secondAttribute="trailing" constant="110" id="s5E-BC-vIe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OJm-YM-hEL" secondAttribute="trailing" constant="122.5" id="sFc-yi-J3i"/>
                             <constraint firstItem="tye-lo-43E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="srx-vC-grB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oJo-wB-BWs" secondAttribute="trailing" constant="110" id="vzg-81-gHe"/>
                             <constraint firstItem="tye-lo-43E" firstAttribute="height" secondItem="oJo-wB-BWs" secondAttribute="height" id="zdD-AK-QHd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLabel" destination="tye-lo-43E" id="StA-Zh-rZX"/>
+                        <outlet property="redLabel" destination="tRi-Pd-Kyh" id="1Wr-Wj-lX2"/>
+                        <outlet property="yellowLabel" destination="oJo-wB-BWs" id="sA1-dc-NjR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="4"/>
+            <point key="canvasLocation" x="20.625" y="3.1690140845070425"/>
         </scene>
     </scenes>
     <resources>
