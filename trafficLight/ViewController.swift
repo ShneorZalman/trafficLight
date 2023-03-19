@@ -8,10 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var redLabel: UIView!
     @IBOutlet var yellowLabel: UIView!
     @IBOutlet var greenLabel: UIView!
+    var changeColour = "red"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,12 +21,21 @@ class ViewController: UIViewController {
         greenLabel.alpha = 0.3
     }
     @IBAction func startButtonDidTapped(_ sender: UIButton) {
+//        redLabel.alpha = 1
         sender.setTitle("Next", for: .normal)
-        redLabel.alpha = 1
-        if redLabel.alpha == 1 {
-            yellowLabel.alpha = 1
-            redLabel.alpha = 0.3
+        
+        if changeColour == "red" {
+            redLabel.alpha = 1
             greenLabel.alpha = 0.3
+            changeColour = "yellow"
+        } else if changeColour == "yellow" {
+            redLabel.alpha = 0.3
+            yellowLabel.alpha = 1
+            changeColour = "green"
+        } else {
+            yellowLabel.alpha = 0.3
+            greenLabel.alpha = 1
+            changeColour = "red"
         }
     }
 }
